@@ -1,137 +1,183 @@
-body {
-    font-family: 'Roboto', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+/* ==========================
+   Global Styles 
+   ========================== */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
     background-color: #ffffff;
-    }
+    overflow: hidden; /* Prevents horizontal scroll */
+}
+
+/* ==========================
+   Header & Navigation
+   ========================== */
 header {
-    padding: 40px ;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    }
-.company-name {
-        
-    font-size: 40px;
-    font-weight: 900;
-    color: #060707;
-    display: flex;
-    align-items: flex-end; /* Aligns the dot properly */
-    gap: 0; /* Adds spacing between text and dot */
+    padding: 10px 5%;
+    background: rgba(254, 253, 253, 0.8);
+    z-index: 1000;
 }
-        
+
+/* Company Name */
+.company-name {
+     font-size: clamp(20px, 3vw, 32px);
+    font-weight: bold;
+}
 
 .company-name .c-letter {
     color: #00A7CC;
 }
 
 .company-name .dot {
-    font-size: 10px; /* Adjust size as needed */
-    position: relative;
-    top: -10px; /* Moves dot lower to align it */
-    color: #00A7CC;
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     background-color: #00A7CC;
-    border-radius: 10%;
+    border-radius: 50%;
     display: inline-block;
-    margin-left: 5px;
+    margin-left: 0%;
     vertical-align: middle;
+    margin-top: 5px;
 }
-       
+
+/* Navigation */
 nav ul {
     list-style: none;
     display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #000000;
-    font-size: 20px;
+    font-size: clamp(16px, 2vw, 20px);
     font-weight: 400;
-    transition: 0.3s;
-    position: relative;
-}   
-
-nav ul li a:hover {
-    color: #0b0b0b;
+    transition: 0.3s ease-in-out;
 }
 
-nav ul li a {
-    transition: color 0.2s ease-in-out;
-}       
-
 nav ul li a:hover {
-    color: #0c0c0c;
-    transform: translate(-2px);
-    transition: all 0.2s ease;
+    color: #00A7CC;
 }
+
+/* ==========================
+   Content Section
+   ========================== */
 .content {
+    width: 90%;
     max-width: 1100px;
-    margin: 50px auto;
+    margin: 120px auto;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100vh;
 }
+
+/* Responsive Font Sizes */
 .content h4 {
-    font-size: 24px;
+    font-size: clamp(20px, 2vw, 24px);
     font-weight: 100;
 }
+
 .content h2 {
-    font-size: 26px;
+    font-size: clamp(24px, 3vw, 32px);
     font-weight: 500;
 }
+
 .content p {
-    font-size: 20px;
+    font-size: clamp(16px, 2vw, 20px);
     color: #0b0101;
-    margin-top: 20px;           
+    margin-top: 20px;
 }
+
+/* ==========================
+   Call-to-Action Button
+   ========================== */
 .quote_button {
     margin-top: 30px;
 }
+
 .quote_button button {
-    padding: 15px 30px;
+    padding: 12px 25px;
     border: none;
     background: linear-gradient(90deg, #0045AD 0%, #00A5EB 100%);
-    color: #fff;
-    font-size: 18px;
+    color: white;
+    font-size: clamp(16px, 2vw, 18px);
     border-radius: 30px;
     cursor: pointer;
-}
-.image-container {
-    position: absolute;
-    width: 572px;
-    height: 672px;
-    right: 0px;
-    top: 20px;
-}
-.image-container img {
-    width: 100%;
-    height: 100%;
-    opacity: 100%;
+    transition: box-shadow 0.3s ease-in-out;
 }
 
+.quote_button button:hover {
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================
+   Image Section
+   ========================== */
+.image-container {
+    width: clamp(250px, 40%, 572px);
+    max-height: 672px;
+    position: absolute;
+    right: 0;
+    top: -15px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    opacity: 1;
+}
+
+/* ==========================
+   Responsive Text Classes
+   ========================== */
 .content .bold-font {
     font-weight: 700;
 }
-        
+
 .content .blue-font {
     color: #00A7CC;
 }
 
 .content .thin-font {
-    font-weight: 200;}
+    font-weight: 200;
+}
 
-        
+/* ==========================
+   Links
+   ========================== */
 a {
     text-decoration: underline;
     color: #00A7CC;
 }
 
-        /
-.nav-home:hover, .nav-services:hover, .nav-contacts:hover, .nav-blog:hover, .nav-search:hover {
+/* ==========================
+   Hover Effects
+   ========================== */
+.nav-home:hover,
+.nav-services:hover,
+.nav-contacts:hover,
+.nav-blog:hover,
+.nav-search:hover {
     color: #00A7CC;
 }
 
@@ -139,49 +185,72 @@ a {
     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.25);
 }
 
-@media (max-width: 1024px) {
-    header {
-        padding: 30px 50px;
-    }
-    .content {
-        padding: 30px 50px;
-    }
-    .content h2 {
-        font-size: 32px;
-    }
-}
+/* ==========================
+   Responsive Styles
+   ========================== */
 
+/* Large Screens */
 @media (max-width: 1728px) {
     body {
         width: 100%;
         height: auto;
-        }
-}    
+    }
+}
+
+/* Tablets & Small Laptops */
+@media (max-width: 1024px) {
+    header {
+        padding: 20px 4%;
+    }
+    .content {
+        padding: 20px 4%;
+        text-align: center;
+        align-items: center;
+    }
+    .image-container {
+        position: static;
+        width: 50%;
+        margin: 30px auto;
+    }
+}
+
+/* Mobile Screens */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         text-align: center;
-        padding: 20px;
     }
     nav {
-        margin-top: 20px;
+        margin-top: 10px;
     }
     nav ul {
-        flex-wrap: wrap;
         justify-content: center;
     }
     .content {
-        text-align: center;
         padding: 20px;
-    }
-    .content h2 {
-        font-size: 28px;
-    }
-    .quote_button button {
-        font-size: 16px;
-        padding: 10px 25px;
+        text-align: center;
+        align-items: center;
     }
     .image-container {
-        display:contents;
-        }
+        width: 70%;
+        margin: 20px auto;
+        position: static;
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+    .company-name {
+        font-size: 30px;
+    }
+    .content h2 {
+        font-size: 24px;
+    }
+    .quote_button button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+    .image-container {
+        width: 90%;
+    }
 }

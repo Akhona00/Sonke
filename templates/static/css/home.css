@@ -1,48 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+/* ==========================
+   Global Styles 
+   ========================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
 }
 
-body {
-    position: relative;
+html, body {
     width: 100%;
-    min-height: 100vh;
-    background: #FFFFFF;
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-}
-
-.page-container {
-    position: relative;
-    min-height: 150vh;
-}
-
-.background-overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url('background.png');
+    height: 100vh; /* Ensure it fits within the screen */
+    overflow: hidden; /* Prevent scrolling */
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('background.png'); /* Ensure correct path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 100%;
-    
+    color: rgb(1, 1, 1);
 }
 
+/* ==========================
+   Header & Navigation
+   ========================== */
 header {
     width: 100%;
-    padding: 40px 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 5%;
+    background: rgba(249, 247, 247, 0.8);
+    z-index: 1000;
 }
 
 .company-name {
-    font-size: 40px;
-    font-weight: 900;
+    font-size: clamp(20px, 3vw, 32px);
+    font-weight: bold;
 }
 
 .company-name .c-letter {
@@ -50,104 +51,114 @@ header {
 }
 
 .company-name .dot {
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     background-color: #00A7CC;
     border-radius: 50%;
     display: inline-block;
-    margin-left: 5px;
+    margin-left: 0%;
     vertical-align: middle;
+    margin-top: 5px;
 }
 
+/* Navigation Bar */
 nav ul {
     list-style: none;
     display: flex;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #000000;
-    font-size: 20px;
-    font-weight: 400;
-    transition: 0.3s;
-    position: relative;
+    color: #000;
+    font-size: clamp(14px, 2vw, 18px);
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
     color: #00A7CC;
 }
 
-nav ul li a {
-    transition: color 0.2s ease-in-out;
-}
-
-nav ul li a:hover {
-    color: #00A7CC;
-    transform: translate(-2px);
-    transition: all 0.2s ease;
-}
-
+/* ==========================
+   Content Section (Centered)
+   ========================== */
 .content {
-    padding: 50px 100px;
-    max-width: 1200px;
-    margin-top: 50px;
-    animation: fadeIn 1s ease-out forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 0;
+    margin-left: auto;
+    height: 100vh; /* Ensures content stays inside the screen */
+    padding: 5%;
+    animation: slideIn 1s ease-in-out;
 }
 
-@keyframes fadeIn {
-    from {
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
         opacity: 0;
-        transform: translateY(20px);
     }
-    to {
+    50% {
+        transform: translateX(50%);
         opacity: 1;
-        transform: translateY(0);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
     }
 }
 
 .content h1 {
-    line-height: 1.2;
-    margin-bottom: 50px;
-    text-align: left;
+    line-height: 1.1;
 }
 
 .content h1 .big-thin {
     display: block;
-    font-size: 128px;
-    font-weight: 100;
+    font-size: clamp(40px, 6vw, 90px);
+    font-weight: 10;
 }
 
 .content h1 .medium-bold {
     display: block;
-    font-size: 80px;
-    font-weight: 700;
+    font-size: clamp(20px, 5vw, 40px);
+    font-weight: 300;
 }
 
 .content h1 .blue-text {
     color: #00A7CC;
+    font-size: clamp(20px, 5vw, 40px);
+    font-weight: 100;
 }
 
 .content h1 .small-thin {
     display: block;
-    font-size: 128px;
-    font-weight: 100;
+    font-size: clamp(20px, 5vw, 40px);
+    font-weight: 600;
 }
 
+.content h1 .thin {
+   font-weight: 100;
+}
+
+/* Button */
 .btn {
     display: inline-block;
-    padding: 15px 50px;
+    padding: 12px 30px;
     background: #00A7CC;
     color: white;
     text-decoration: none;
-    font-size: 32px;
+    font-size: clamp(16px, 2vw, 24px);
     font-weight: 500;
-    border-radius: 30px;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    transition: 0.3s;
+    border-radius: 25px;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    margin-top: 15px;
 }
 
 .btn:hover {
@@ -155,97 +166,115 @@ nav ul li a:hover {
     transform: translateY(-3px);
 }
 
+/* ==========================
+   Logo Section (Auto-Scaling)
+   ========================== */
 .logo-container {
+    width: 20vw; /* Responsive size */
+    max-width: 300px;
+    height: auto;
     position: absolute;
-    width: 472px;
-    height: 472px;
-    right: 100px;
-    top: 260px;
-   
+    bottom: 25%;
+    right: 5%;
 }
 
 .logo-container img {
     width: 100%;
-    height: 100%;
-    opacity: 100%;
+    height: auto;
+    opacity: 1;
 }
 
-@media (max-width: 1400px) {
-    .content h1 .big-thin,
-    .content h1 .small-thin {
-        font-size: 90px;
-    }
-    
-    .content h1 .medium-bold {
-        font-size: 60px;
-    }
-    
-    .logo-container {
-        width: 350px;
-        height: 350px;
-    }
-}
+/* ==========================
+   Responsive Styles
+   ========================== */
 
+/* Medium Screens (Tablets & Small Laptops) */
 @media (max-width: 1024px) {
     header {
-        padding: 30px 50px;
+        padding: 8px 4%;
     }
-    
-    .content {
-        padding: 30px 50px;
-    }
-    
+
     .content h1 .big-thin,
     .content h1 .small-thin {
-        font-size: 70px;
+        font-size: clamp(35px, 6vw, 70px);
     }
-    
+
     .content h1 .medium-bold {
-        font-size: 45px;
+        font-size: clamp(28px, 5vw, 60px);
     }
-    
+
+    .btn {
+        font-size: 18px;
+        padding: 10px 25px;
+    }
+
     .logo-container {
-        width: 300px;
-        height: 300px;
+        max-width: 200px;
     }
 }
 
+/* Small Screens (Phones) */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         text-align: center;
-        padding: 20px;
+        padding: 5px;
     }
-    
-    nav {
-        margin-top: 20px;
-    }
-    
+
     nav ul {
         flex-wrap: wrap;
         justify-content: center;
+        padding-top: 5px;
     }
-    
+
+    nav ul li {
+        margin: 5px;
+    }
+
     .content {
-        text-align: center;
-        padding: 20px;
+        padding: 5%;
+        height: 100vh;
     }
-    
+
     .content h1 .big-thin,
     .content h1 .small-thin {
-        font-size: 50px;
+        font-size: clamp(30px, 5vw, 50px);
     }
-    
+
     .content h1 .medium-bold {
-        font-size: 32px;
+        font-size: clamp(22px, 4.5vw, 40px);
     }
-    
+
     .btn {
-        font-size: 24px;
-        padding: 10px 30px;
+        font-size: 16px;
+        padding: 8px 20px;
     }
-    
+
     .logo-container {
-        display: none;
+        width: 18vw;
+        max-width: 150px;
+        bottom: 3%;
     }
 }
+
+/* Very Small Screens (Phones under 400px width) */
+@media (max-width: 400px) {
+    .content h1 .big-thin,
+    .content h1 .small-thin {
+        font-size: 26px;
+    }
+
+    .content h1 .medium-bold {
+        font-size: 20px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 7px 18px;
+    }
+
+    .logo-container {
+        display: none; /* Hide logo if needed */
+    }
+}
+
