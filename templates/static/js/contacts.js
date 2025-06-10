@@ -1,6 +1,6 @@
 // Firebase Configuration - UPDATE WITH YOUR ACTUAL CONFIG
 const firebaseConfig = {
-  apiKey: "AIzaSyBSoTK49lIvkK2XQAe1GPbrX5_k9F-i0ZA",
+  apiKey: apiKey,
   authDomain: "website-0001-6cc20.firebaseapp.com",
   projectId: "website-0001-6cc20",
   storageBucket: "website-0001-6cc20.firebasestorage.app",
