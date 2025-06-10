@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search - Sonke Solutions</title>
+    <link rel="stylesheet" href="static/css/search.css">
+</head>
+<body>
+    <header>
+        <div class="company-name">
+            <div class="company-name"> <span class="c-letter">S</span>onke
+                <span class="dot"></span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blogs.html">Blog</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+                <li><a href="search.html">Search</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="page-title">
+            <h1>Find Your <span class="blue-text">Solution</span></h1>
+            <p>Search through our comprehensive database of services, solutions, and resources to find exactly what you need.</p>
+        </div>
+
+        <div class="search-section">
+            <h2>What are you looking for?</h2>
+            <p>Enter keywords, service names, or describe your needs</p>
+            <div class="search-container">
+                <div class="search-input-wrapper">
+                    <input type="text" class="search-input" id="searchInput" placeholder="Search for services, solutions, or resources...">
+                    <button class="search-btn" onclick="performSearch()">
+                        <span>🔍</span>
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-filters">
+            <button class="filter-btn active" data-filter="all">All Results</button>
+            <button class="filter-btn" data-filter="services">Services</button>
+            <button class="filter-btn" data-filter="solutions">Solutions</button>
+            <button class="filter-btn" data-filter="resources">Resources</button>
+            <button class="filter-btn" data-filter="support">Support</button>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Searching for results...</p>
+        </div>
+
+        <div class="search-results" id="searchResults">
+            <div class="results-header">
+                <div class="results-count" id="resultsCount">Found 12 results</div>
+                <select class="sort-dropdown" id="sortDropdown">
+                    <option value="relevance">Sort by Relevance</option>
+                    <option value="date">Sort by Date</option>
+                    <option value="name">Sort by Name</option>
+                    <option value="category">Sort by Category</option>
+                </select>
+            </div>
+
+            <div id="resultsContainer">
+                <!-- Sample results -->
+                <div class="result-card">
+                    <div class="result-header">
+                        <div>
+                            <h3 class="result-title">
+                                <a href="#">Digital Transformation Consulting</a>
+                            </h3>
+                            <div class="result-meta">
+                                <span>📅 Updated 2 days ago</span>
+                                <span>⭐ 4.9 rating</span>
+                                <span>👥 120+ clients</span>
+                            </div>
+                        </div>
+                        <div class="result-category">Services</div>
+                    </div>
+                    <p class="result-description">
+                        Comprehensive digital transformation services to modernize your business processes, enhance customer experience, and drive growth through innovative technology solutions.
+                    </p>
+                    <div class="result-tags">
+                        <span class="tag">Digital Strategy</span>
+                        <span class="tag">Process Automation</span>
+                        <span class="tag">Cloud Migration</span>
+                        <span class="tag">Data Analytics</span>
+                    </div>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-header">
+                        <div>
+                            <h3 class="result-title">
+                                <a href="#">Cloud Infrastructure Setup</a>
+                            </h3>
+                            <div class="result-meta">
+                                <span>📅 Updated 1 week ago</span>
+                                <span>⭐ 4.7 rating</span>
+                                <span>👥 85+ projects</span>
+                            </div>
+                        </div>
+                        <div class="result-category">Solutions</div>
+                    </div>
+                    <p class="result-description">
+                        Professional cloud infrastructure deployment and management services. We help businesses migrate to the cloud with minimal downtime and maximum security.
+                    </p>
+                    <div class="result-tags">
+                        <span class="tag">AWS</span>
+                        <span class="tag">Azure</span>
+                        <span class="tag">Migration</span>
+                        <span class="tag">Security</span>
+                    </div>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-header">
+                        <div>
+                            <h3 class="result-title">
+                                <a href="#">Cybersecurity Assessment</a>
+                            </h3>
+                            <div class="result-meta">
+                                <span>📅 Updated 3 days ago</span>
+                                <span>⭐ 5.0 rating</span>
+                                <span>👥 200+ assessments</span>
+                            </div>
+                        </div>
+                        <div class="result-category">Services</div>
+                    </div>
+                    <p class="result-description">
+                        Comprehensive security audits and vulnerability assessments to protect your business from cyber threats and ensure compliance with industry standards.
+                    </p>
+                    <div class="result-tags">
+                        <span class="tag">Security Audit</span>
+                        <span class="tag">Compliance</span>
+                        <span class="tag">Risk Assessment</span>
+                        <span class="tag">Penetration Testing</span>
+                    </div>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-header">
+                        <div>
+                            <h3 class="result-title">
+                                <a href="#">Implementation Guide: CRM Systems</a>
+                            </h3>
+                            <div class="result-meta">
+                                <span>📅 Updated 5 days ago</span>
+                                <span>⭐ 4.8 rating</span>
+                                <span>👥 150+ downloads</span>
+                            </div>
+                        </div>
+                        <div class="result-category">Resources</div>
+                    </div>
+                    <p class="result-description">
+                        Step-by-step guide for implementing customer relationship management systems in your organization. Includes best practices, common pitfalls, and optimization tips.
+                    </p>
+                    <div class="result-tags">
+                        <span class="tag">CRM</span>
+                        <span class="tag">Implementation</span>
+                        <span class="tag">Best Practices</span>
+                        <span class="tag">Guide</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <button onclick="changePage(-1)" id="prevBtn">← Previous</button>
+                <button class="active" onclick="goToPage(1)">1</button>
+                <button onclick="goToPage(2)">2</button>
+                <button onclick="goToPage(3)">3</button>
+                <button onclick="changePage(1)" id="nextBtn">Next →</button>
+            </div>
+        </div>
+
+        <div class="no-results" id="noResults" style="display: none;">
+            <h3>No results found</h3>
+            <p>We couldn't find any results matching your search criteria.</p>
+            <div class="suggestions">
+                <h4>Try these suggestions:</h4>
+                <ul>
+                    <li>Check your spelling and try again</li>
+                    <li>Use more general terms</li>
+                    <li>Try different keywords</li>
+                    <li>Remove some filters</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let currentPage = 1;
+        let currentFilter = 'all';
+        let currentSort = 'relevance';
+
+        // Search functionality
+        function performSearch() {
+            const query = document.getElementById('searchInput').value.trim();
+            const loading = document.getElementById('loading');
+            const results = document.getElementById('searchResults');
+            const noResults = document.getElementById('noResults');
+
+            if (!query) {
+                alert('Please enter a search term');
+                return;
+            }
+
+            // Show loading
+            loading.classList.add('show');
+            results.style.display = 'none';
+            noResults.style.display = 'none';
+
+            // Simulate search delay
+            setTimeout(() => {
+                loading.classList.remove('show');
+                
+                // For demo purposes, show results for any query
+                if (query.length > 0) {
+                    results.style.display = 'block';
+                    updateResultsCount();
+                } else {
+                    noResults.style.display = 'block';
+                }
+            }, 1500);
+        }
+
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                currentFilter = this.dataset.filter;
+                filterResults();
+            });
+        });
+
+        function filterResults() {
+            const cards = document.querySelectorAll('.result-card');
+            cards.forEach(card => {
+                const category = card.querySelector('.result-category').textContent.toLowerCase();
+                if (currentFilter === 'all' || category === currentFilter) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            updateResultsCount();
+        }
+
+        // Sort functionality
+        document.getElementById('sortDropdown').addEventListener('change', function() {
+            currentSort = this.value;
+            sortResults();
+        });
+
+        function sortResults() {
+            const container = document.getElementById('resultsContainer');
+            const cards = Array.from(container.querySelectorAll('.result-card'));
+            
+            cards.sort((a, b) => {
+                switch(currentSort) {
+                    case 'date':
+                        return Math.random() - 0.5; // Random for demo
+                    case 'name':
+                        const nameA = a.querySelector('.result-title a').textContent;
+                        const nameB = b.querySelector('.result-title a').textContent;
+                        return nameA.localeCompare(nameB);
+                    case 'category':
+                        const catA = a.querySelector('.result-category').textContent;
+                        const catB = b.querySelector('.result-category').textContent;
+                        return catA.localeCompare(catB);
+                    default:
+                        return Math.random() - 0.5; // Random for demo
+                }
+            });
+
+            cards.forEach(card => container.appendChild(card));
+        }
+
+        // Pagination
+        function changePage(direction) {
+            const newPage = currentPage + direction;
+            if (newPage >= 1 && newPage <= 3) {
+                goToPage(newPage);
+            }
+        }
+
+        function goToPage(page) {
+            currentPage = page;
+            document.querySelectorAll('.pagination button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`.pagination button:nth-child(${page + 1})`).classList.add('active');
+            
+            // Update button states
+            document.getElementById('prevBtn').disabled = currentPage === 1;
+            document.getElementById('nextBtn').disabled = currentPage === 3;
+        }
+
+        function updateResultsCount() {
+            const visibleCards = document.querySelectorAll('.result-card[style*="block"], .result-card:not([style])').length;
+            document.getElementById('resultsCount').textContent = `Found ${visibleCards} results`;
+        }
+
+        // Enter key search
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+
+        // Initialize
+        goToPage(1);
+    </script>
+</body>
+</html>

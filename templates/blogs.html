@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Sonke Solutions</title>
+    <link rel="stylesheet" href="static/css/blog.css">
+    
+    <header id="header">
+        <div class="company-name">
+            <span class="c-letter">S</span>onke
+            <span class="dot"></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blogs.html">Blog</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+                <li><a href="search.html">Search</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <div class="page-title">
+            <h1>Our <span class="blue-text">Blog</span></h1>
+            <p>Stay updated with the latest trends, insights, and tips in web development and digital solutions</p>
+        </div>
+
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search articles..." id="searchInput">
+            <button class="search-btn" id="searchBtn">🔍</button>
+        </div>
+
+        <div class="blog-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web development">Web Development</button>
+            <button class="filter-btn" data-filter="mobile apps">Mobile Apps</button>
+            <button class="filter-btn" data-filter="design">Design</button>
+            <button class="filter-btn" data-filter="technology">Technology</button>
+        </div>
+
+        <div class="blog-grid" id="blogGrid">
+            <article class="blog-card" data-category="web development">
+                <div class="blog-image">🌐</div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">Web Development</span>
+                        <span class="blog-date">📅 June 5, 2025</span>
+                    </div>
+                    <h3>The Future of Web Development: Trends to Watch in 2025</h3>
+                    <p class="blog-excerpt">Explore the latest trends shaping the web development landscape, from AI integration to progressive web applications and the rise of serverless architecture.</p>
+                    <div class="blog-author">
+                        <div class="author-info">
+                            <div class="author-avatar">SS</div>
+                            <span class="author-name">Sonke Solutions</span>
+                        </div>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card" data-category="web development">
+                <div class="blog-image">📈</div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">Web Development</span>
+                        <span class="blog-date">📅 May 18, 2025</span>
+                    </div>
+                    <h3>SEO Optimization Strategies for Modern Websites</h3>
+                    <p class="blog-excerpt">Learn the latest SEO techniques and strategies to improve your website's search engine rankings and drive more organic traffic to your business.</p>
+                    <div class="blog-author">
+                        <div class="author-info">
+                            <div class="author-avatar">SS</div>
+                            <span class="author-name">Sonke Solutions</span>
+                        </div>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card" data-category="mobile apps">
+                <div class="blog-image">📱</div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">Mobile Apps</span>
+                        <span class="blog-date">📅 June 1, 2025</span>
+                    </div>
+                    <h3>Cross-Platform Mobile Development: React Native vs Flutter</h3>
+                    <p class="blog-excerpt">A comprehensive comparison of the two leading cross-platform frameworks, helping you choose the right solution for your mobile app project.</p>
+                    <div class="blog-author">
+                        <div class="author-info">
+                            <div class="author-avatar">SS</div>
+                            <span class="author-name">Sonke Solutions</span>
+                        </div>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card" data-category="design">
+                <div class="blog-image">🎨</div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">Design</span>
+                        <span class="blog-date">📅 May 28, 2025</span>
+                    </div>
+                    <h3>UI/UX Design Principles for Better User Engagement</h3>
+                    <p class="blog-excerpt">Learn essential design principles that create intuitive user experiences and drive better engagement rates for your digital products.</p>
+                    <div class="blog-author">
+                        <div class="author-info">
+                            <div class="author-avatar">SS</div>
+                            <span class="author-name">Sonke Solutions</span>
+                        </div>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card" data-category="technology">
+                <div class="blog-image">☁️</div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">Technology</span>
+                        <span class="blog-date">📅 May 25, 2025</span>
+                    </div>
+                    <h3>Cloud Computing for Small Businesses: A Complete Guide</h3>
+                    <p class="blog-excerpt">Discover how cloud computing can transform your small business operations, reduce costs, and improve scalability with practical implementation tips.</p>
+                    <div class="blog-author">
+                        <div class="author-info">
+                            <div class="author-avatar">SS</div>
+                            <span class="author-name">Sonke Solutions</span>
+                        </div>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card" data-category="technology">
+                <div class="blog-image">🔒</div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">Technology</span>
+                        <span class="blog-date">📅 May 22, 2025</span>
+                    </div>
+                    <h3>Website Security Best Practices for 2025</h3>
+                    <p class="blog-excerpt">Essential security measures every website owner should implement to protect their site and users from cyber threats and data breaches.</p>
+                    <div class="blog-author">
+                        <div class="author-info">
+                            <div class="author-avatar">SS</div>
+                            <span class="author-name">Sonke Solutions</span>
+                        </div>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Loading more articles...</p>
+        </div>
+
+        <div class="load-more-container">
+            <button class="load-more-btn" id="loadMoreBtn">Load More Articles</button>
+        </div>
+
+        <div class="newsletter-section">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Get the latest insights and updates delivered straight to your inbox</p>
+            <div class="newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="Enter your email address" id="newsletterEmail">
+                <button class="newsletter-btn" id="newsletterBtn">Subscribe</button>
+            </div>
+        </div>
+    </div>
+
+    <button class="scroll-top" id="scrollTop">↑</button>
+
+    <script>
+        // Enhanced JavaScript functionality
+        class BlogManager {
+            constructor() {
+                this.currentFilter = 'all';
+                this.searchTerm = '';
+                this.additionalPosts = [
+                    {
+                        category: 'design',
+                        emoji: '🚀',
+                        date: 'May 20, 2025',
+                        title: 'Performance Optimization: Making Your Website Lightning Fast',
+                        excerpt: 'Learn advanced techniques to optimize your website performance, reduce loading times, and improve user experience with modern tools and strategies.'
+                    },
+                    {
+                        category: 'mobile apps',
+                        emoji: '⚡',
+                        date: 'May 15, 2025',
+                        title: 'Building Progressive Web Apps: The Complete Guide',
+                        excerpt: 'Discover how to create powerful progressive web applications that work seamlessly across all devices and platforms with offline capabilities.'
+                    },
+                    {
+                        category: 'technology',
+                        emoji: '🤖',
+                        date: 'May 12, 2025',
+                        title: 'AI Integration in Modern Web Development',
+                        excerpt: 'Explore how artificial intelligence is revolutionizing web development, from automated testing to intelligent user interfaces and personalization.'
+                    }
+                ];
+                this.loadedCount = 0;
+                this.init();
+            }
+
+            init() {
+                this.setupEventListeners();
+                this.setupScrollEffects();
+                this.animateCards();
+            }
+
+            setupEventListeners() {
+                // Filter functionality
+                const filterBtns = document.querySelectorAll('.filter-btn');
+                filterBtns.forEach(btn => {
+                    btn.addEventListener('click', (e) => this.handleFilter(e));
+                });
+
+                // Search functionality
+                const searchInput = document.getElementById('searchInput');
+                const searchBtn = document.getElementById('searchBtn');
+                
+                searchInput.addEventListener('input', (e) => this.handleSearch(e));
+                searchBtn.addEventListener('click', () => this.performSearch());
+
+                // Newsletter subscription
+                const newsletterBtn = document.getElementById('newsletterBtn');
+                newsletterBtn.addEventListener('click', () => this.handleNewsletter());
+
+                // Load more articles
+                const loadMoreBtn = document.getElementById('loadMoreBtn');
+                loadMoreBtn.addEventListener('click', () => this.loadMoreArticles());
+
+                // Scroll to top
+                const scrollTopBtn = document.getElementById('scrollTop');
+                scrollTopBtn.addEventListener('click', () => this.scrollToTop());
+            }
+
+            setupScrollEffects() {
+                const header = document.getElementById('header');
+                const scrollTopBtn = document.getElementById('scrollTop');
+
+                window.addEventListener('scroll', () => {
+                    // Header scroll effect
+                    if (window.scrollY > 100) {
+                        header.classList.add('scrolled');
+                        scrollTopBtn.classList.add('visible');
+                    } else {
+                        header.classList.remove('scrolled');
+                        scrollTopBtn.classList.remove('visible');
+                    }
+                });
+            }
+
+            handleFilter(e) {
+                const filterBtns = document.querySelectorAll('.filter-btn');
+                const blogCards = document.querySelectorAll('.blog-card');
+                
+                filterBtns.forEach(btn => btn.classList.remove('active'));
+                e.target.classList.add('active');
+
+                const filterValue = e.target.dataset.filter.toLowerCase();
+                this.currentFilter = filterValue;
+
+                this.filterAndSearch();
+            }
+
+            handleSearch(e) {
+                this.searchTerm = e.target.value.toLowerCase();
+                this.filterAndSearch();
+            }
+
+            performSearch() {
+                const searchInput = document.getElementById('searchInput');
+                this.searchTerm = searchInput.value.toLowerCase();
+                this.filterAndSearch();
+            }
+
+            filterAndSearch() {
+                const blogCards = document.querySelectorAll('.blog-card');
+                
+                blogCards.forEach(card => {
+                    const category = card.dataset.category.toLowerCase();
+                    const title = card.querySelector('h3').textContent.toLowerCase();
+                    const excerpt = card.querySelector('.blog-excerpt').textContent.toLowerCase();
+                    
+                    const matchesFilter = this.currentFilter === 'all' || category.includes(this.currentFilter);
+                    const matchesSearch = this.searchTerm === '' || 
+                                        title.includes(this.searchTerm) || 
+                                        excerpt.includes(this.searchTerm) ||
+                                        category.includes(this.searchTerm);
+                    
+                    if (matchesFilter && matchesSearch) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 100);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            }
+
+            handleNewsletter() {
+                const emailInput = document.getElementById('newsletterEmail');
+                const email = emailInput.value.trim();
+                
+                if (this.validateEmail(email)) {
+                    // Simulate subscription
+                    const btn = document.getElementById('newsletterBtn');
+                    const originalText = btn.textContent;
+                    
+                    btn.textContent = 'Subscribing...';
+                    btn.disabled = true;
+                    
+                    setTimeout(() => {
+                        btn.textContent = '✓ Subscribed!';
+                        btn.style.background = '#4CAF50';
+                        emailInput.value = '';
+                        
+                        setTimeout(() => {
+                            btn.textContent = originalText;
+                            btn.style.background = 'white';
+                            btn.disabled = false;
+                        }, 2000);
+                    }, 1500);
+                } else {
+                    this.showNotification('Please enter a valid email address', 'error');
+                }
+            }
+
+            validateEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
+
+            loadMoreArticles() {
+                if (this.loadedCount >= this.additionalPosts.length) {
+                    document.getElementById('loadMoreBtn').textContent = 'No more articles';
+                    document.getElementById('loadMoreBtn').disabled = true;
+                    return;
+                }
+
+                const loading = document.getElementById('loading');
+                const blogGrid = document.getElementById('blogGrid');
+                
+                loading.style.display = 'block';
+                
+                setTimeout(() => {
+                    const post = this.additionalPosts[this.loadedCount];
+                    const newCard = this.createBlogCard(post);
+                    blogGrid.appendChild(newCard);
+                    
+                    // Animate new card
+                    setTimeout(() => {
+                        newCard.style.opacity = '1';
+                        newCard.style.transform = 'translateY(0)';
+                    }, 100);
+                    
+                    this.loadedCount++;
+                    loading.style.display = 'none';
+                    
+                    if (this.loadedCount >= this.additionalPosts.length) {
+                        document.getElementById('loadMoreBtn').textContent = 'All articles loaded';
+                        document.getElementById('loadMoreBtn').disabled = true;
+                    }
+                }, 1500);
+            }
+
+            createBlogCard(post) {
+                const card = document.createElement('article');
+                card.className = 'blog-card';
+                card.dataset.category = post.category;
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(50px)';
+                
+                card.innerHTML = `
+                    <div class="blog-image">${post.emoji}</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">${this.capitalizeWords(post.category)}</span>
+                            <span class="blog-date">📅 ${post.date}</span>
+                        </div>
+                        <h3>${post.title}</h3>
+                        <p class="blog-excerpt">${post.excerpt}</p>
+                        <div class="blog-author">
+                            <div class="author-info">
+                                <div class="author-avatar">SS</div>
+                                <span class="author-name">Sonke Solutions</span>
+                            </div>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </div>
+                `;
+                
+                return card;
+            }
+
+            capitalizeWords(str) {
+                return str.replace(/\w\S*/g, (txt) => 
+                    txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
+                );
+            }
+
+            scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+
+            animateCards() {
+                const cards = document.querySelectorAll('.blog-card');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }
+                    });
+                }, {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                });
+
+                cards.forEach(card => observer.observe(card));
+            }
+
+            showNotification(message, type = 'info') {
+                const notification = document.createElement('div');
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: ${type === 'error' ? '#ff4757' : '#00A7CC'};
+                    color: white;
+                    padding: 15px 25px;
+                    border-radius: 5px;
+                    z-index: 10000;
+                    font-size: 14px;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                    animation: slideInRight 0.3s ease;
+                `;
+                
+                notification.textContent = message;
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.style.animation = 'slideOutRight 0.3s ease';
+                    setTimeout(() => {
+                        document.body.removeChild(notification);
+                    }, 300);
+                }, 3000);
+            }
+        }
+
+        // Initialize the blog manager when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new BlogManager();
+        });
+
+        // Add some CSS animations for notifications
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideInRight {
+                from {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            
+            @keyframes slideOutRight {
+                from {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+            }
+            
+            .blog-card.hidden {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: all 0.3s ease;
+            }
+            
+            .blog-card.visible {
+                opacity: 1;
+                transform: translateY(0);
+                transition: all 0.3s ease;
+            }
+            
+            .load-more-btn:disabled {
+                opacity: 0.6;
+                cursor: not-allowed;
+                transform: none !important;
+            }
+            
+            .search-input::-webkit-input-placeholder {
+                color: #999;
+                transition: all 0.3s ease;
+            }
+            
+            .search-input:focus::-webkit-input-placeholder {
+                color: transparent;
+            }
+            
+            /* Enhanced hover effects */
+            .blog-card:hover .blog-image {
+                transform: scale(1.05);
+                transition: transform 0.3s ease;
+            }
+            
+            .blog-card:hover .read-more {
+                animation: bounce 0.6s ease infinite alternate;
+            }
+            
+            @keyframes bounce {
+                from { transform: translateX(0); }
+                to { transform: translateX(8px); }
+            }
+            
+            /* Mobile enhancements */
+            @media (max-width: 768px) {
+                .search-container {
+                    margin: 0 auto 30px auto;
+                }
+                
+                .search-input {
+                    font-size: 16px; /* Prevents zoom on iOS */
+                }
+                
+                .newsletter-input {
+                    font-size: 16px; /* Prevents zoom on iOS */
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html

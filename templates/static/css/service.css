@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+/* ==========================
+   Global Styles 
+   ========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* ==========================
+   Header & Navigation
+   ========================== */
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background: rgba(255, 254, 254, 0.849);
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.company-name {
+    font-size: clamp(20px, 3vw, 32px);
+    font-weight: bold;
+}
+
+.company-name .c-letter {
+    color: #00A7CC;
+}
+
+.company-name .dot {
+    width: 6px;
+    height: 6px;
+    background-color: #00A7CC;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 0%;
+    vertical-align: middle;
+    margin-top: 5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: clamp(14px, 2vw, 18px);
+    font-weight: 400;
+    transition: 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #00A7CC;
+}
+
+/* ==========================
+   Main Content
+   ========================== */
+.main-content {
+    margin-top: 100px;
+    padding: 40px 5%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-title h1 {
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.page-title .blue-text {
+    color: #00A7CC;
+}
+
+.page-title p {
+    font-size: clamp(16px, 2vw, 20px);
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ==========================
+   Services Grid
+   ========================== */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.service-card {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 167, 204, 0.15);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #00A7CC, #0045AD);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    font-size: 36px;
+    color: white;
+}
+
+.service-card h3 {
+    font-size: clamp(20px, 2.5vw, 24px);
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: clamp(14px, 1.8vw, 16px);
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.service-features {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.service-features li {
+    padding: 5px 0;
+    color: #555;
+    font-size: 14px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.service-features li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #00A7CC;
+    font-weight: bold;
+}
+
+.service-btn {
+    background: linear-gradient(90deg, #0045AD 0%, #00A5EB 100%);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.service-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 69, 173, 0.3);
+}
+
+/* ==========================
+   CTA Section
+   ========================== */
+.cta-section {
+    background: linear-gradient(135deg, #00A7CC, #0045AD);
+    color: white;
+    text-align: center;
+    padding: 60px 5%;
+    margin: 80px 0 40px 0;
+    border-radius: 20px;
+}
+
+.cta-section h2 {
+    font-size: clamp(24px, 3vw, 36px);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: clamp(16px, 2vw, 18px);
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.cta-btn {
+    background: white;
+    color: #00A7CC;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 30px;
+    font-size: clamp(16px, 2vw, 18px);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+}
+
+/* ==========================
+   Responsive Styles
+   ========================== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px 5%;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .main-content {
+        margin-top: 140px;
+        padding: 20px 5%;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .service-card {
+        padding: 30px 20px;
+    }
+
+    .cta-section {
+        padding: 40px 5%;
+        margin: 60px 0 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 25px 15px;
+    }
+
+    .service-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+    }
+}
