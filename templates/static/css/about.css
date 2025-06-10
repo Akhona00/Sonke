@@ -13,7 +13,7 @@ html, body {
     min-height: 100vh;
     font-family: 'Roboto', sans-serif;
     background-color: #ffffff;
-    overflow: hidden; /* Prevents horizontal scroll */
+    
 }
 
 /* ==========================
@@ -187,11 +187,13 @@ a {
    Responsive Styles
    ========================== */
 
-/* Large Screens */
-@media (max-width: 1728px) {
-    body {
-        width: 100%;
-        height: auto;
+/* Large Laptops & Desktops */
+@media (max-width: 1440px) {
+    header {
+        padding: 20px 5%;
+    }
+    .content {
+        padding: 20px 5%;
     }
 }
 
@@ -251,4 +253,19 @@ a {
     .image-container {
         width: 90%;
     }
+}
+/*add a footer make the background blurry*/
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color:40% #f2f2f2;
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
 }

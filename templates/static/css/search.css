@@ -445,6 +445,15 @@ nav ul li a:hover {
     left: 0;
 }
 
+.footer {
+    margin-top: 50px;
+    text-align: center;
+    padding: 10px;
+    background-color:40% #f2f2f2;
+    color: #333;
+}
+
+
 /* ==========================
    Responsive Design
    ========================== */
@@ -478,6 +487,10 @@ nav ul li a:hover {
     .search-btn {
         align-self: center;
         padding: 12px 25px;
+    }
+
+    .footer {
+        text-align: 12px;
     }
 }
 

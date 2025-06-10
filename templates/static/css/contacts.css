@@ -333,6 +333,15 @@ nav ul li a:hover {
     margin-top: 30px;
 }
 
+.footer {
+    margin-top: 50px;
+    text-align: center;
+    padding: 10px;
+    background-color:40% #f2f2f2;
+    color: #333;
+}
+
+
 /* ==========================
     Responsive Styles
 ========================== */
@@ -386,6 +395,10 @@ nav ul li a:hover {
         height: 300px;
         font-size: 36px;
     }
+
+    .footer {
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -397,6 +410,10 @@ nav ul li a:hover {
     .submit-btn {
         width: 100%;
         justify-content: center;
+    }
+
+    .footer {
+        font-size: 10px;
     }
 }
      

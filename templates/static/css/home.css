@@ -11,7 +11,7 @@
 html, body {
     width: 100%;
     height: 100vh; /* Ensure it fits within the screen */
-    overflow: hidden; /* Prevent scrolling */
+
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
@@ -182,6 +182,17 @@ nav ul li a:hover {
     width: 100%;
     height: auto;
     opacity: 1;
+}
+
+/* ==========================
+   Footer make the background blury
+   ========================== */
+.footer {
+    margin-top: 50px;
+    text-align: center;
+    padding: 10px;
+    background-color:40% #f2f2f2;
+    color: #333;
 }
 
 /* ==========================

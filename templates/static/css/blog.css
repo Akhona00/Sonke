@@ -652,6 +652,10 @@ nav ul li a:hover {
         width: 45px;
         height: 45px;
     }
+
+    .footer {
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -667,5 +671,18 @@ nav ul li a:hover {
     .main-content {
         margin-top: 180px;
     }
+
+    .footer {
+        font-size: 12px;
+    }
 }
+
+.footer {
+    margin-top: 50px;
+    text-align: center;
+    padding: 10px;
+    background-color:40% #f2f2f2;
+    color: #333;
+}
+
   
